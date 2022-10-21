@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+
+@font-face {
+    font-family:gamer;
+    src: url(../fonts/abnes.otf);
+}
+@font-face {
+    font-family:g;
+    src: url(../fonts/Azonix.otf);
+}
+
+header{
+    
+    
+}
+    
+
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    background: #171717;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav_container{
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.nav_logo{
+font-family: gamer;
+font-size: 2em;
+font-weight: 900;
+color: lime;
+
+}
+
+.nav_menu{
+    font-family: g;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3em;
+}
+.nav_menu a:hover {
+    color: lime;
+    text-decoration: none;
+
+
+
+}
+.nav_item{
+    color: white;
+    text-decoration: none;
+    --clyppy:polygon(0 0, 0 0, 0 100%, 0% 100%);
+    
+}
+
+.nav_item::after{
+    content:"";
+    display: block;
+    background: lime;
+    width: 100%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clyppy);
+    transition: clip-path .3s;
+}
+
+.nav_item:hover{
+    --clyppy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.nav_input:checked + .nav_menu{
+background:#171717;
+}
+
+.nav_label, .nav_input{
+display: none;
+}
+
+@media (max-width: 768px){
+    .nav_label{
+    
+        display: block;
+        cursor: pointer;
+    }
+    .nav_menu{
+        position: fixed;
+        top: 80px;
+        bottom: 0;
+        background: lime;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        text-align: center;
+        clip-path: circle(0 at center);
+    }
+    .nav_input:checked + .nav_menu{
+        clip-path:circle(100% at center);
+        }
+}
+
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: g;
+    flex-direction: column;
+
+
+}
+
+
+.main{
+    height: 160vh;
+    background: url(https://www.wallpapertip.com/wmimgs/29-291851_img-4k-space-wallpaper-green.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.title {
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #fff;
+    padding: 0 100px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: 2px solid lime;
+    color: #fff;
+    text-decoration: none;
+    background: lime;
+}
+
+.btn:hover {
+    background: none;
+    
+}
+
+.btn-home {
+    display: flex;
+}
+
+.btn-home a {
+    margin: 0 10px;
+}
+
+
+.content {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    text-decoration: underline;
+    text-decoration-color: lime;
+}
+
+
+
+.pie {
+    font-size: 20px;
+    font-family: g;
+    height: 100px;
+    background-color: #171717;
+    
+
+}
+
+.pie h2{
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.main h2{
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+    text-decoration: underline 5px;
+    text-decoration-color: lime;
+    align-items: center;}
+
+
+.jogos{
+    border-radius: 20px;
+    padding-top: 10px;
+    height: 950px;
+    width: 1300px;
+    padding-bottom: 20px;
+    opacity: 90%;
+    
+   
+    
+}
+
+
+.descargas {
+    margin-top: 10px;
+    background-color: #171717;
+    display: inline-flex;
+    padding-left: 10px ;
+    padding-top:10px ;
+    padding-bottom: 10px;
+    font-family: g;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3em;
+    border-radius: 10px;
+}
+
+.descargas p{
+    text-decoration: underline 3px;
+    text-decoration-color: lime;
+}
+
+.boton{
+    margin-right: 40px;
+    text-align:end ;
+    text-decoration: none;
+    color:white ;
+
+ }
+ .boton:hover{
+    color: lime;
+ }
+
+ .juego{
+    border-radius: 10px;
+ }
+
+
+ .cuerpo{
+    height: 160vh;
+    background: url(https://www.wallpapertip.com/wmimgs/29-291851_img-4k-space-wallpaper-green.jpg) no-repeat center;
+    background-size: cover;
+}
+
+
+.flyer h2{
+    font-family: g;
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: lime;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.flyer p{
+    font-family: g;
+    color: white;
+     padding: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.video{
+    top: 30px;
+       position: relative;
+       left: 30%;
+       border-radius: 20px;
+}
+
+.titulo{
+    font-family: g;
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: lime;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+
+.carusel{
+    padding-top: 30px;}
